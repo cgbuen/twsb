@@ -28,7 +28,7 @@ const Grid = ({ blok }) => {
       className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
       {...storyblokEditable(blok)}
     >
-      <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+      <div className="absolute transform sm:right-0 sm:top-0 sm:translate-x-8 lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
             {renderGrid(blok.grid)}
         </div>
     </div>

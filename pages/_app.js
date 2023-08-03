@@ -1,27 +1,28 @@
 import "../styles/globals.css";
+import { Fragment } from 'react'
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Feature from "../components/Feature";
 import Page from "../components/Page";
 import Button from "../components/Button";
-import Category from "../components/Category";
 import CTA from "../components/CTA";
-import Favorites from "../components/Favorites";
+import Featured from "../components/Featured";
 import Grid from "../components/Grid";
 import Hero from "../components/Hero";
-
-import MobileMenu from "../components/MobileMenu";
-import TopNavigation from "../components/TopNavigation";
-import Footer from "../components/Footer";
+import OurFavorites from "../components/OurFavorites";
+import ShopByCategory from "../components/ShopByCategory";
+import GlobalReference from "../components/GlobalReference";
+import Global from "../components/Global";
 
 const components = {
-  feature: Feature,
   page: Page,
   button: Button,
-  category: Category,
   cta: CTA,
-  favorites: Favorites,
+  featured: Featured,
   grid: Grid,
   hero: Hero,
+  our_favorites: OurFavorites,
+  shop_by_category: ShopByCategory,
+  global_reference: GlobalReference,
+  global: Global,
 };
 
 storyblokInit({
@@ -36,12 +37,9 @@ storyblokInit({
 function MyApp({ Component, pageProps }) {
   return (
     <div className="bg-white">
-      <MobileMenu />
-      <TopNavigation />
       <main>
         <Component {...pageProps} />
       </main>
-      <Footer />
     </div>
   )
 }
