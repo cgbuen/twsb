@@ -8,7 +8,7 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
-export default function Home({ story, rels }) {
+export default function Category({ story, rels }) {
   story = useStoryblokState(story);
   rels = useStoryblokState(rels);
 
@@ -19,14 +19,18 @@ export default function Home({ story, rels }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopNavigation blok={rels && rels[0].content} />
-      <StoryblokComponent blok={story.content} />
+      <div className="bg-gray-50">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <StoryblokComponent blok={story.content} />
+        </div>
+      </div>
       <Footer blok={rels && rels[1].content} />
     </div>
   );
 }
 
 export async function getStaticProps() {
-  let slug = "home";
+  let slug = "category";
 
   let sbParams = {
     version: "draft", // or 'published'
